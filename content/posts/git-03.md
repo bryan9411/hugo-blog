@@ -7,7 +7,7 @@ categories: ['Git 版本控制']
 isCJKLanguage: true
 draft: false
 ---
-![git](/static/img/git-banner.jpeg)
+![git](/images/Git/banner.jpeg)
 
 # fetch vs pull
 | 指令    | 說明                                                                                           |

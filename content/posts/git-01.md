@@ -7,7 +7,7 @@ categories: ['Git 版本控制']
 isCJKLanguage: true
 draft: false
 ---
-![git](/static/img/git-banner.jpeg)
+![git](/images/Git/banner.jpeg)
 
 Git 它是一個版本控制系統，可以幫助你追蹤程式碼變化、管理版本、合作開發，是團隊協作中不可或缺的工具之一。
 

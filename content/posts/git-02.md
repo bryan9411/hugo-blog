@@ -7,7 +7,7 @@ categories: ['Git 版本控制']
 isCJKLanguage: true
 draft: false
 ---
-![git](/static/img/git-banner.jpeg)
+![git](/images/Git/banner.jpeg)
 
 再 [Git: 基本指令](/posts/git-01) 介紹到一些基本 git 指令，但還有更多實用的指令 👇
 
