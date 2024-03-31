@@ -1,5 +1,5 @@
 ---
-title: 'GraphQL: GraphQL 與 RESTful API 差異'
+title: 'GraphQL 與 RESTful API 差異'
 date: '2023-11-20T21:49:00+08:00'
 author: 'Bryan'
 tags: ['GraphQL']
