@@ -1,0 +1,149 @@
+baseURL: https://bryan9411.github.io # 網站的基本URL
+title: Bryan Blog # 網站標題
+languageCode: "zh-tw" # 語言
+paginate: 5 # 每個列表頁面上要顯示的帖子數量，分頁功能的設定
+theme: PaperMod # 選擇要應用於網站的主題
+
+enableRobotsTXT: true # 啟用網站的robots.txt文件，用於搜索引擎爬取控制
+buildDrafts: false # 控制是否生成草稿（drafts）中的內容
+buildFuture: false # 控制是否生成將來發布的內容
+buildExpired: false # 控制是否重新生成已過期的內容
+
+googleAnalytics: UA-123-45 # 設置Google Analytics的跟蹤ID，用於分析網站訪問數據
+
+minify: # 進行網頁壓縮和最小化的相關設定
+  disableXML: true # 禁用XML最小化
+  minifyOutput: true # 對輸出進行最小化
+
+params:
+  env: production # 網站環境設定為生產環境
+  title: Bryan's Blog # 網站標題
+  description: 'Bryan blog description' # 網站描述
+  keywords: [Blog, Portfolio, PaperMod] # 網站關鍵詞
+  author: Bryan # 作者名稱
+
+  images: ['<link or path of image for opengraph, twitter-cards>'] # 用於OpenGraph和Twitter卡片的圖像
+  DateFormat: '2006.01.02' # 日期格式
+  defaultTheme: auto # 默認主題設定為自動
+  disableThemeToggle: false # 啟用主題切換功能
+
+  ShowReadingTime: true # 顯示閱讀時間
+  ShowShareButtons: false # 顯示分享按鈕
+  ShowPostNavLinks: true # 顯示帖子導航連結
+  ShowBreadCrumbs: true # 顯示面包屑導航
+  ShowCodeCopyButtons: true # 顯示代碼複製按鈕
+  ShowWordCount: true # 顯示詞數
+  ShowRssButtonInSectionTermList: true # 在分類和標籤列表中顯示RSS按鈕
+  UseHugoToc: false # 使用 Hugo 的目錄（Table of Contents）
+  disableSpecial1stPost: false # 不禁用第一篇帖子的特殊處理
+  disableScrollToTop: false # 不禁用滾動到頂部的功能
+  comments: true # 顯示評論功能
+  hidemeta: false # 隱藏元數據
+  hideSummary: false # 隱藏摘要
+  showtoc: true # 顯示內容大綱
+  tocopen: false # 內容大綱預設是否展開
+
+  assets:
+    favicon: '<link / abs url>' # 網站圖標
+    favicon16x16: '<link / abs url>' # 16x16像素圖標
+    favicon32x32: '<link / abs url>' # 32x32像素圖標
+    apple_touch_icon: '<link / abs url>' # Apple觸摸圖標
+    safari_pinned_tab: '<link / abs url>' # Safari固定選項卡圖標
+
+  label:
+    text: "Bryan's Blog"
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: false # 需要明確啟用個人主頁模式
+    title: ExampleSite # 個人主頁標題
+    subtitle: 'This is subtitle' # 個人主頁副標題
+    imageUrl: '<img location>' # 圖像位置
+    imageWidth: 120 # 圖像寬度
+    imageHeight: 120 # 圖像高度
+    imageTitle: my image # 圖像標題
+    buttons:
+      - name: Archives
+        url: archives
+      - name: Tags
+        url: tags
+
+  # home-info mode
+  homeInfoParams:
+    Title: "Hi there \U0001F44B"
+    Content: '嗨! 我是 Bryan 這是我個人部落格！'
+
+  socialIcons:
+    - name: github
+      url: 'https://github.com/'
+    - name: email
+      url: 'https://github.com/'
+    # - name: twitter
+    #   url: 'https://twitter.com/'
+    # - name: stackoverflow
+    #   url: 'https://stackoverflow.com'
+
+  analytics:
+    google:
+      SiteVerificationTag: 'XYZabc' # Google分析驗證標籤
+
+  cover:
+    hidden: true # 隱藏封面圖片，但不在結構化數據中隱藏
+    hiddenInList: true # 在列表頁面和首頁隱藏封面圖片
+    hiddenInSingle: true # 在單獨頁面中隱藏封面圖片
+
+  # editPost:
+  #   URL: 'https://github.com/<path_to_repo>/content' # 編輯帖子的URL
+  #   Text: 'Suggest Changes' # 編輯文本
+  #   appendFilePath: true # 添加文件路徑到編輯連結
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false # 不區分大小寫
+    shouldSort: true # 執行排序
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10 # 限制搜索結果數量
+    keys: ['title', 'permalink', 'summary', 'content'] # 用於搜索的關鍵字
+
+menu:
+  main:
+    # identifier 用於識別菜單項目的唯一標識符
+    # name 菜單項目顯示的名稱
+    # url 菜單項目的URL
+    # weight菜單項目的權重，用於排序
+
+    - identifier: search
+      name: 搜尋
+      url: /search/
+      weight: 10
+
+    - identifier: archives
+      name: 所有文章
+      url: /archives/
+      weight: 15
+
+    - identifier: categories
+      name: 分類
+      url: /categories/
+      weight: 20
+    - identifier: tags
+      name: 標籤
+      url: /tags/
+      weight: 25
+
+pygmentsUseClasses: true # 啟用Pygments的CSS類別以進行程式碼高亮
+
+markup:
+  highlight:
+    noClasses: false # 使用CSS類別來渲染程式碼高亮
+    # anchorLineNos: true # 在程式碼行號上添加錨點
+    # codeFences: true # 啟用程式碼區塊
+    # guessSyntax: true # 自動猜測程式碼的語法類型
+    # lineNos: true # 顯示程式碼行號
+    # style: github # 選擇程式碼高亮風格，這裡設置為Monokai風格
