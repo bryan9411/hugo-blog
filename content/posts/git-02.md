@@ -1,5 +1,5 @@
 ---
-title: 'Git: 修改提交與重置'
+title: '如何修改提交與重置'
 date: '2023-11-08T21:17:32+08:00'
 author: 'Bryan'
 tags: ['git']

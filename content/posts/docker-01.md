@@ -14,6 +14,10 @@ Docker 是一個開源的容器化平台，由 `Dockerfile` 、 `Docker Image` �
 
 可將應用程式及其相關環境打包成一個獨立的容器(Container)，確保應用程式在不同的環境中能夠快速運行，而不受環境變化的影響。
 
+**安裝 Docker**
+
+[官方文件](<https://docs.docker.com/desktop/install/mac-install/> "官方文件")
+
 # Docker 與虛擬機(Virtual Machine)區別
 Docker 主要優勢在於部署快速、環境一致性、效能高、容易管理，可以快速地部署和啟動容器，並且容器之間可以獨立運行，互不影響。
 

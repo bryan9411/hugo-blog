@@ -1,5 +1,5 @@
 ---
-title: 'Git: Fetch vs Pull '
+title: 'Fetch vs Pull '
 date: '2023-11-12T17:24:15+08:00'
 author: 'Bryan'
 tags: ['git']

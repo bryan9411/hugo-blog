@@ -1,5 +1,5 @@
 ---
-title: 'Git: 基本指令'
+title: 'Git 基本指令'
 date: '2023-11-07T21:48:41+08:00'
 author: 'Bryan'
 tags: ['git']
