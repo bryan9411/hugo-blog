@@ -8,16 +8,16 @@ isCJKLanguage: true
 draft: false
 ---
 
-# Docker Hub 
+### Docker Hub 
 [Docker hub](<https://hub.docker.com/> "Docker hub")是 Docker 官方維護了一個公共倉庫，裡面放置大多數的 image 檔案，像是如果需要 ubuntu 或 Linux 環境，都可以在這網站下載到相關 image
 
-# 下載 Image
+### 下載 Image
   1. 啟動 docker
   2. 在 [Docker hub](<https://hub.docker.com/> "Docker hub") 網站註冊登入
   3. 搜尋 hello-world 這個 image 映像檔
   4. 指令 `docker pull hello-world` 把該 image 映像檔下載下來
 
-# 查看本地 Image
+### 查看本地 Image
 啟動 docker 輸入 `docker images` 會顯示本機已有的映像檔
 
 ```
@@ -32,7 +32,7 @@ hello-world   latest    ee301c921b8a   11 months ago   9.14kB
   * 建立時間
   * 該 image 大小
 
-# 啟動 Image
+### 啟動 Image
 image 下載完後，要起一個 docker container ，然後把 hello-world 這個 image 放進 container 裡面
 
 ```
@@ -64,7 +64,7 @@ For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 ```
 
-# 刪除 Image
+### 刪除 Image
 只要知道 image 名稱，就可以透過指令做刪除
 
 ```
