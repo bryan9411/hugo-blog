@@ -1,68 +1,77 @@
 ---
-title: 'JS 變數底層運作'
-date: '2022-09-08T22:39:26+08:00'
+title: 'JS 字串函數'
+date: '2022-10-10T23:36:33+08:00'
 author: 'Bryan'
-tags: ['JavaScript']
-categories: ['JavaScript']
+tags: [JavaScript]
+categories: [JavaScript]
 isCJKLanguage: true
 draft: false
 ---
+介紹工作上常使用到的字串函數方法
 
-一般的重新賦值，只要修改值就會變更
+### `trim` 移除字串的開頭和結尾的空白字元
 ```
-var a = 10
-console.log(a); // 10
+const str = '   Hello, World!   '
+const trimStr = str.trim()
 
-a = 20
-console.log(a); // 20
-```
-但是物件狀態就不一樣了
-```
-var objA = {
-    number: 10
-}
-
-var objB = objA 
-console.log(objA, objB) // { number: 10 } { number: 10 }
-
-objA.number = 20
-console.log(objA, objB) // { number: 20 } { number: 20 }
-
-```
-發現 objA 物件修改值，兩邊就會改值
-
-會這樣的原因跟底層有關係，物件是以一種記憶體形式方式儲存，再把變數指向這個記憶體位置。因為兩個儲存的記憶體位置是一樣的，所以一改之後就會其他的部份也改了
-```
-/**
- * objA 記憶體位置 0x01, objB 記憶體位置 0x02
- */
-
-var objA = {
-    number: 10
-}
-
-var objB = objA // 將 objB 指向了 objA 的記憶體位置，而不是在創建一個新的物件
-
-console.log(objB === objA) // true 因為記憶體儲存位置一樣
-
+console.log(trimStr) // 'Hello, World!'
 ```
 
-接著看下面這例子
-
+### `indexOf` 找出指定字串出現位置的 index
 ```
-var arr = [1, 2, 3]
-var arr2 = [1, 2, 3]
+const str = 'Hello, World!'
+const index = str.indexOf('World')
 
-console.log(arr[0] === arr2[0]) // true
-console.log(arr === arr2) // false
+console.log(index) // 7
 ```
-arr 與 arr2 是兩個不同的陣列物件，它們位於記憶體中不同的位置
 
-arr: 0x01
+### `lastIndexOf` 找出指定字串最後一個出現位置的 index
+```
+const str = 'Hello, World!'
+const lastIndex = str.lastIndexOf('o')
 
-arr2: 0x02
+console.log(lastIndex) // 8
+```
 
-因為它們指向不同的記憶體位置，所以 `console.log(arr === arr2)` 輸出為 false
+### `charAt` 取得指定位置的 index
+```
+const str = 'Hello, World!'
+const char = str.charAt(4)
+console.log(char) // 'o'
+```
 
-但是當比較的 arr[0] 和 arr2[0]，實際上比較的是這兩個陣列中的第一個元素，而不是記憶體位置，
-所以 `console.log(arr[0] === arr2[0]` 輸出為 true
+### `slice` 從字串中擷取一個子字串
+```
+const str = 'Hello, World!'
+const slicedStr = str.slice(7, 12)
+console.log(slicedStr) // 'World'
+```
+
+### `concat` 將多個字串連接在一起
+```
+const str1 = 'Hello'
+const str2 = 'World'
+const concatenatedStr = str1.concat(', ', str2, '!')
+console.log(concatenatedStr) // 'Hello, World!'
+```
+
+### `replace` 將指定字串替換
+```
+const str = 'Hello, World!'
+const replacedStr = str.replace('World', 'Everyone')
+console.log(replacedStr) // 'Hello, Everyone!'
+```
+
+### `split` 將字串分割成字串陣列
+```
+const str = 'Hello, World!'
+const splittedStr = str.split(', ')
+console.log(splittedStr) // ['Hello', 'World!']
+```
+
+### `join` 將字串陣列中的所有元素連接成一個字串
+```
+const arr = ['Hello', 'World!']
+const joinedStr = arr.join(', ')
+console.log(joinedStr) // 'Hello, World!'
+```
