@@ -1,6 +1,6 @@
 baseURL: https://bryan9411.github.io # 網站的基本URL
 title: Bryan Blog # 網站標題
-languageCode: 'zh-tw' # 語言
+defaultContentLanguage: 'zh-tw' # 語言
 paginate: 5 # 每個列表頁面上要顯示的帖子數量，分頁功能的設定
 theme: PaperMod # 選擇要應用於網站的主題
 
